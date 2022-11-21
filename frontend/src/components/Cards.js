@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 export default function CardsComponent(props) {
   return (
-    <Card sx={{ maxWidth: 150 }}>
+    <Card >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -15,9 +15,10 @@ export default function CardsComponent(props) {
           width="150"
           image={props.imgURL}
           alt="No image found"
+          sx={{ maxWidth: 150 }}
         />
         <CardContent>
-          <Typography gutterBottom  component="div" >
+          <Typography >
             {props.title}
           </Typography>          
         </CardContent>
