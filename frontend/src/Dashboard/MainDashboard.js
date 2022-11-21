@@ -15,7 +15,7 @@ const MainDashboard=()=>{
                 <Dashboard currenPgNum={currenPgNum} handleTotalCount={(totalCountValue)=>setTotalCount(totalCountValue/parseInt(process.env.REACT_APP_PAGE_SIZE)) }/>
             </Grid>
             <Grid item xs={8}>            
-                <PaginationComponent totalCount={totalCount} onPageChange={(pgNumber)=>setCurrenPgNum(pgNumber)}/>
+               {totalCount!==0 && <PaginationComponent totalCount={totalCount} onPageChange={(pgNumber)=>setCurrenPgNum(pgNumber)}/>}
             </Grid>
             </Grid>
         </Box>
