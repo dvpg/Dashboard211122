@@ -35,6 +35,6 @@ const Dashboard=(props)=>{
     
     if(loading) return 'Please  wait   loading  ....  '
     if(error) return `Errors ${error}`
-    return (dashboardData.length!==0 && <ul>{dashboardData.map((v,i)=><li key={i}><Cards  title={v.title} imgURL={v.url}/></li>)}</ul>)
+    return (dashboardData.length!==0 && <ul style={{listStyleType:"none"}}>{dashboardData.map((v,i)=><li key={i}><Cards  title={v.title} imgURL={v.url}/></li>)}</ul>)
 }
 export default  Dashboard;
