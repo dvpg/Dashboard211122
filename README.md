@@ -14,4 +14,7 @@ FE & BE env files passed usually we dont commit but for the assessment have push
 any files / folder  which are not to be push place in .gitignore file
 //*******
 
+Docker file push to generate image via deployment script
+@ Production to run the app - npm run prod -cmd used
+
 
