@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useState,useContext} from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -14,15 +14,16 @@ const drawerWidth = 100;
 
 export default function Layout(props) {
 const userDetails=useContext(AuthContext)
+const [activeMenuIdx,setActiveMenuIdx]=useState()
 
    //sidebar
   const drawer = (
     <div>  
       <List>
         {[{name:'User List',toLink:'/userList'},{name:'Photos',toLink:'/dashboard'},{name:'Logout',toLink:'/'}].map((text, index) => (          
-          <Link to={text.toLink} key={index} style={{textDecoration:'none'}}>  
-          <ListItem key={index} disablePadding >
-            <ListItemButton> 
+          <Link to={text.toLink} key={index} style={{textDecoration:'none',color:'black'}} onClick={()=>setActiveMenuIdx(index)}>  
+          <ListItem key={index} disablePadding divider={true} style={{backgroundColor:(activeMenuIdx===index)?"grey":''}} >
+            <ListItemButton selected={activeMenuIdx===index?true:false}> 
               <ListItemText primary={text.name} />
             </ListItemButton>
           </ListItem>
