@@ -35,7 +35,7 @@ const UserListing=()=>{
             if(data!==undefined && data.fetchUserList.length!==0){
                 let newData=data.fetchUserList.map((v,i)=>{
                     return (<TableRow
-                                key={v.id}
+                                key={i}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>     
                                 <TableCell>{v.id}</TableCell>
                                 <TableCell>{v.username}</TableCell>

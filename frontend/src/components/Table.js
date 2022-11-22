@@ -13,7 +13,7 @@ export default function RTableComponent(props) {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead style={{backgroundColor:'black'}}>
-          <TableRow key="allCol">
+          <TableRow key={1}>
             {props.columns.map((col,i)=> <TableCell style={{color:'white'}}>{col}</TableCell>)}
           </TableRow>
         </TableHead>
